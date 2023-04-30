@@ -3,7 +3,7 @@
 
 #define SERIAL_ENABLED
 
-#define POOLING_DELAY 5 // ms -> 1000/Hz
+#define POOLING_DELAY 10 // ms -> 1000/Hz
 #define CONNECTION_DELAY 100 // ms -> 1000/Hz
 #define BAT_DELAY 10000 // ms -> 1000/Hz
 #define BUZZER_DELAY 200 // ms -> 1000/Hz
@@ -344,7 +344,6 @@ bool send_key(const struct KeySequence *keys) {
       keycodes[0] = keys->second.key;
       blehid.keyboardReport(keys->second.modifier, keycodes);
     }
-    blehid.keyRelease();
     return true;
   }
 
@@ -443,7 +442,6 @@ bool process_action_btns(bool reset) {
   }
   
   blehid.keyboardReport(0, keycodes);
-  blehid.keyRelease();
 
   return true;
 }
@@ -623,6 +621,7 @@ void setup()
   digitalWrite(BUZZER_PIN, LOW);
 
   Bluefruit.autoConnLed(false); // Disable LED
+  Bluefruit.configPrphBandwidth(BANDWIDTH_MAX); 
   Bluefruit.begin();
   Bluefruit.setTxPower(0);    // Check bluefruit.h for supported values
   Bluefruit.setName("Braille");
@@ -665,6 +664,7 @@ void loop()
     if (!process_braille_btns(false)) { // Process braille buttons and check if they're release
       process_action_btns(false); // Process actions (space, backspace, enter) if braille buttons are released
     }
+    blehid.keyRelease();
 
     process_battery(false);
     delay(POOLING_DELAY);
