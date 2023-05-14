@@ -69,14 +69,14 @@ const struct KeySequence default_map[] = {
   {{ALTGR,0x14},{NOMOD,0x00},DEFAULT}, // /
   {{SHIFT,0x1e},{NOMOD,0x00},DEFAULT}, // !
   {{NOMOD,0x2e},{NOMOD,0x00},DEFAULT}, // =
-  {{NOMOD,0x00},{NOMOD,0x00},DEFAULT}, //
-  {{NOMOD,0x00},{NOMOD,0x00},UPPER}, //
+  {{NOMOD,0x00},{NOMOD,0x00},DEFAULT}, // 
+  {{NOMOD,0x00},{NOMOD,0x00},UPPER}, // 
   {{NOMOD,0x2f},{NOMOD,0x0c},DEFAULT}, // í
   {{NOMOD,0x2f},{NOMOD,0x12},DEFAULT}, // ó
-  {{NOMOD,0x00},{NOMOD,0x00},DEFAULT}, //
+  {{NOMOD,0x00},{NOMOD,0x00},DEFAULT}, // 
   {{SHIFT,0x64},{NOMOD,0x00},DEFAULT}, // |
   {{NOMOD,0x34},{NOMOD,0x04},DEFAULT}, // ã
-  {{NOMOD,0x00},{NOMOD,0x00},NUMBER}, //
+  {{NOMOD,0x00},{NOMOD,0x00},NUMBER}, // 
   {{NOMOD,0x0c},{NOMOD,0x00},DEFAULT}, // i
   {{NOMOD,0x34},{NOMOD,0x12},DEFAULT}, // õ
   {{NOMOD,0x16},{NOMOD,0x00},DEFAULT}, // s
@@ -274,9 +274,9 @@ const struct KeySequence number_map[] = {
   {{NOMOD,0x00},{NOMOD,0x00},DEFAULT}, //
   {{NOMOD,0x00},{NOMOD,0x00},DEFAULT}, //
   {{NOMOD,0x00},{NOMOD,0x00},DEFAULT}, //
-  {{NOMOD,0x00},{NOMOD,0x00},DEFAULT}, //
+  {{NOMOD,0x00},{NOMOD,0x00},NUMBER}, //
   {{NOMOD,0x26},{NOMOD,0x00},NUMBER}, // 9
-  {{NOMOD,0x00},{NOMOD,0x00},DEFAULT}, //
+  {{SHIFT,0x26},{NOMOD,0x00},DEFAULT}, // (
   {{NOMOD,0x00},{NOMOD,0x00},DEFAULT}, //
   {{NOMOD,0x00},{NOMOD,0x00},DEFAULT}, //
   {{NOMOD,0x27},{NOMOD,0x00},NUMBER}, // 0
@@ -289,7 +289,7 @@ const struct KeySequence number_map[] = {
   {{NOMOD,0x00},{NOMOD,0x00},DEFAULT}, //
   {{NOMOD,0x22},{NOMOD,0x00},NUMBER}, // 5
   {{NOMOD,0x00},{NOMOD,0x00},DEFAULT}, //
-  {{NOMOD,0x00},{NOMOD,0x00},DEFAULT}, //
+  {{SHIFT,0x27},{NOMOD,0x00},DEFAULT}, // )
   {{NOMOD,0x00},{NOMOD,0x00},DEFAULT}, //
   {{NOMOD,0x1f},{NOMOD,0x00},NUMBER}, // 2
   {{NOMOD,0x00},{NOMOD,0x00},DEFAULT}, //
